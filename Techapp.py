@@ -20,7 +20,7 @@ if ask_btn:
         try:
 
             with st.spinner("Please wait, AI is thinking..."):
-                API_KEY = "AQ.Ab8RN6KxLfZNjNUu63rp3JEdFElWR2w60jIQRQRc-I0uOvUe6g"
+                API_KEY =  st.secrets["GEMINI_API_KEY"]
                 client = genai.Client(api_key=API_KEY)
                 response = client.models.generate_content(
                     model = 'gemini-3.8-flash',
